@@ -41,6 +41,7 @@ You can perform a direct translation using the LLM client.
 
 ```python
 sentence = "law3lm asahbi"
+# only uses OpenAI's gpt-4o
 translation_without_assistance = llm_client.translate(sentence)
 print(translation_without_assistance)
 
@@ -57,7 +58,7 @@ from DarijaAssistant import DarijaAssistant
 # Initialize DarijaAssistant with the LLM client
 assistant = DarijaAssistant(llm_client=llm_client)
 
-# Use assisted translation
+# Use assisted translation: OpenAI's gpt-4o + DarijaAssistant
 sentence = "law3lm asahbi"
 result = assistant.assist_and_translate(sentence)
 print(result)
@@ -69,14 +70,12 @@ print(result)
 
 Here's the difference between GPT-4 translations and our approach, showing how each handles Darija sentences with and without specialized assistance.
 
-|--------------------|--------------------------------------|--------------------------|
 | Darija Sentence    | GPT4o Translation Without Assistance | Assisted Translation     |
 |--------------------|--------------------------------------|--------------------------|
 | law3lm asahbi      | The world, my friend.                | I do not know my friend. |
 | kbchlaba9ich       | I feel thirsty.                      | Fill my cup.             |
 | 3rram dyal lbrahch | Brahch's pen.                        | Plenty of kids.          |
 | chof 3la tfrnisa   | Check the outlet.                    | Look at the smile.       |
-|--------------------|--------------------------------------|--------------------------|
 
 ### 5. Expanding the Dictionary
 
