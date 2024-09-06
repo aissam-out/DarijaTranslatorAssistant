@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name='DarijaTranslatorAssistant',
-    version='1.0.0',
+    version='1.0.1',
     description='A library for assisting in translating Darija to English. It provides a list of potential translations for a given darija word. It also supports translation of full sentences using LLMs (e.g., OpenAI).',
     author='Aissam Outchakoucht',
     author_email='aissam.outchakoucht@gmail.com',

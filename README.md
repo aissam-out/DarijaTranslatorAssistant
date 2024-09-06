@@ -16,7 +16,7 @@ This library allows users to perform both raw and assisted translations, improvi
 To install the library, run:
 
 ```bash
-pip install DarijaAssistant
+pip install DarijaTranslatorAssistant
 ```
 
 ## Usage
@@ -26,7 +26,7 @@ pip install DarijaAssistant
 You can choose between a model hosted at any URL or OpenAI. Here's how to initialize the client:
 
 ```python
-from DarijaAssistant import LLMClient
+from DarijaTranslatorAssistant.llm_client import LLMClient
 
 # Example using OpenAI GPT model
 llm_client = LLMClient(use_openai=True, openai_api_key="your_openai_api_key", openai_model="gpt-4o")
@@ -53,7 +53,7 @@ print(translation_without_assistance)
 For more context-aware translation, use the *DarijaAssistant* class. This will assist the translation process by leveraging a word-distance algorithm.
 
 ```python
-from DarijaAssistant import DarijaAssistant
+from DarijaTranslatorAssistant.darija_assistant import DarijaAssistant
 
 # Initialize DarijaAssistant with the LLM client
 assistant = DarijaAssistant(llm_client=llm_client)
